@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Templates Hub - Modern Edition</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>คอลเลกชัน Notion Templates ฟรีมากมาย</h1>
+        <p>สำรวจ templates ล้ำสมัยในสไตล์ 2025 – คลิกเพื่อดูรายละเอียดแล้ว duplicate ได้เลย!</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ค้นหา templates (เช่น productivity, finance)...">
+            <select id="categoryFilter">
+                <option value="all">ทุกหมวดหมู่</option>
+                <!-- Options จะถูก generate โดย JS -->
+            </select>
+            <select id="sortFilter">
+                <option value="title-asc">ชื่อ A-Z</option>
+                <option value="title-desc">ชื่อ Z-A</option>
+                <option value="category-asc">หมวด A-Z</option>
+                <option value="category-desc">หมวด Z-A</option>
+            </select>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+    <main id="templatesContainer">
+        <!-- Cards จะถูก generate โดย JS ที่นี่ -->
+    </main>
+    <div id="loadingIndicator" class="loading">กำลังโหลด...</div> <!-- สำหรับแสดงตอน load -->
+    <section id="how-to-add">
+        <h2>วิธีเพิ่ม Templates เข้า Notion ของคุณ</h2>
+        <ol>
+            <li>คลิก card เพื่อเปิด modal รายละเอียด</li>
+            <li>ใน modal คลิก "Duplicate Template" เพื่อไปยังลิงก์ Notion</li>
+            <li>คลิก "Duplicate" ในหน้า Notion เพื่อคัดลอกเข้า workspace ของคุณ</li>
+            <li>แก้ไขตามต้องการ!</li>
+        </ol>
+        <p>ถ้าต้องการเพิ่ม templates ใหม่ แก้ไข array ใน script.js แล้ว push ขึ้น GitHub</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 สร้างโดย Grok – ข้อมูลจากแหล่งฟรีสาธารณะ</p>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="templateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Preview" style="display: none;">
+            <p id="modalDesc"></p>
+            <span id="modalCategory"></span>
+            <a id="modalLink" href="#" target="_blank">Duplicate Template</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
